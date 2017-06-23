@@ -5,8 +5,7 @@ import { ButtonGroup } from 'react-bootstrap';
 import { Image } from 'react-bootstrap';
 
 const TooltipInnerStyle = {
-  padding: '10px 8px',
-  backgroundColor: '#0000FF'
+  padding: '10px 8px'
 };
 
 class Treat extends React.Component{
