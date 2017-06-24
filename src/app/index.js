@@ -1,11 +1,16 @@
 import React from "react";
 import {render} from "react-dom";
 import { Button } from 'react-bootstrap';
-import { ButtonGroup } from 'react-bootstrap';
+import { ButtonToolbar  } from 'react-bootstrap';
 import { Image } from 'react-bootstrap';
 
 const TooltipInnerStyle = {
-  padding: '10px 8px'
+   background: 'red',
+   padding:'100px'
+};
+
+const Margin ={
+    margin: '5px 5px 5px 5px'
 };
 
 class Treat extends React.Component{
@@ -18,11 +23,9 @@ class Treat extends React.Component{
                 <div className="row text-center" >
                     <h1>Our Treat</h1>
                 </div>           
-                <div className="row text-center">
-                         <ButtonGroup>
-                            <Button bsStyle="primary"> Sign In </Button>     
-                            <Button bsStyle="primary"> Sign Up</Button> 
-                         </ButtonGroup>
+                <div className="row text-center">                
+                            <Button style={Margin} bsStyle="primary"> Sign In </Button>     
+                            <Button style={Margin} bsStyle="primary"> Sign Up</Button>                                   
                 </div>
             </div>
         );
