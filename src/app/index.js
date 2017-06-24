@@ -29,7 +29,7 @@ class LogoAndName extends React.Component {
         return (
             <div>
                 <div className="row text-center " >
-                    <Image  width={128} height={128} />
+                    <Image width={128} height={128} />
                 </div>
                 <div className="row text-center" >
                     <h1>Our Treat</h1>
