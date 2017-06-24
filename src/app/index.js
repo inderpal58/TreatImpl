@@ -8,10 +8,6 @@ import { FormControl } from 'react-bootstrap';
 import Center from 'react-center';
 import FacebookLogin from 'react-facebook-login';
 
-const TooltipInnerStyle = {
-    margin: '10px 10px 0px 0px'
-};
-
 const MarginTopBottom = {
     margin: '10px 0px 10px 0px'
 };
@@ -31,9 +27,9 @@ const ResponseFacebook = (response) => {
 class LogoAndName extends React.Component {
     render() {
         return (
-            <div style={TooltipInnerStyle} className="content-wrapper"  >
+            <div>
                 <div className="row text-center " >
-                    <Image width={128} height={128} />
+                    <Image  width={128} height={128} />
                 </div>
                 <div className="row text-center" >
                     <h1>Our Treat</h1>
@@ -133,13 +129,29 @@ class Treat extends React.Component {
     }
 
     Submit() {
+        /*var data = {
+            name: this.state.name,
+            email: this.state.email,
+            comment: this.state.comment
+        }
 
+        $.ajax({
+            type: 'POST',
+            url: '/some/url',
+            data: data
+        })
+            .done(function (data) {
+                self.clearForm()
+            })
+            .fail(function (jqXhr) {
+                console.log('failed to register');
+            });*/
     }
 
     render() {
         if (this.state.SignIn == false && this.state.SignUp == false) {
             return (
-                <div style={TooltipInnerStyle} className="content-wrapper"  >
+                <div style={{ padding: '100px 0px 0px 0px'}}>
                     <LogoAndName />
                     <div className="row text-center">
                         <Button style={MarginTopRight} bsStyle="primary" onClick={this.SignIn}> Sign In </Button>
@@ -150,7 +162,7 @@ class Treat extends React.Component {
         }
         else if (this.state.ResetPassword) {
             return (
-                <div style={TooltipInnerStyle} className="content-wrapper"  >
+                <div style={{ padding: '100px 0px 0px 0px'}}>
                     <LogoAndName />
                     <div style={MarginTopBottom} className="row text-center" >
                         <h1>Reset Your Password</h1>
@@ -179,7 +191,7 @@ class Treat extends React.Component {
         }
         else if (this.state.SignIn) {
             return (
-                <div style={TooltipInnerStyle} className="content-wrapper"  >
+                <div style={{ padding: '100px 0px 0px 0px'}}>
                     <LogoAndName />
                     <Center>
                         <div style={MarginTopBottom}>
@@ -226,7 +238,7 @@ class Treat extends React.Component {
         }
         else if (this.state.SignUp) {
             return (
-                <div style={TooltipInnerStyle} className="content-wrapper"  >
+                <div style={{ padding: '100px 0px 0px 0px'}}>
                     <LogoAndName />
                     <Center>
                         <div style={MarginTopBottom}>
@@ -290,4 +302,5 @@ class Treat extends React.Component {
     }
 }
 
-render(<Treat />, window.document.getElementById("treat"));
+render(<div style={{height: screen.height,
+    backgroundColor: "Blue"}} className="content-wrapper"><Treat /></div>, window.document.getElementById("treat"));
